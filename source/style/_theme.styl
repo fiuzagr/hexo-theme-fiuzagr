@@ -1,0 +1,97 @@
+// My info
+.my
+  // level 2
+  box-shadow(2)
+  background-color primary-text-color
+  color primary-color-text
+
+  &::after
+    background url(../image/code.jpg) center center no-repeat
+    opacity 0.3
+
+  .my__name
+    large()
+    font-weight 300
+
+    &,
+    &:active,
+    &:visited
+      color primary-color-text
+
+  .my__title
+    medium()
+    font-weight 300
+
+  .my__name,
+  .my__title
+    text-shadow 0 3px 3px rgba(0,0,0,0.8)
+
+  .my__avatar
+    // level 3
+    box-shadow(3)
+    border-color primary-color-text
+    border-radius 2px
+
+
+// My info (Jumbo)
+.my--jumbo
+  .my__name
+    x-large()
+    font-weight 300
+
+  .my__title
+    large()
+    font-weight 300
+
+
+// E-mail me
+.email-me
+  text-align center
+
+
+// Micro Resume (home)
+.micro-resume
+  text-align center
+
+  &::before,
+  &::after
+      x-large()
+      font-family font-icon
+      color divider-color
+
+  &::before
+    left -(lines(4))
+    top -(lines(.5))
+    content: "\f10d"
+
+  &::after
+    bottom -(lines(.5))
+    right -(lines(4))
+    content: "\f10e"
+
+
+// Menu
+.menu,
+.menu--list
+  text-align center
+  list-style none
+
+
+// By (footer)
+.by
+  text-align center
+
+
+// Resume
+.resume
+  .resume__title,
+  .resume__info
+    text-align right
+
+  .resume__date,
+  .resume__date--thin
+    medium()
+    font-weight 400
+
+  .resume__date--thin
+    small()

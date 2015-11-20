@@ -1,0 +1,13 @@
+//- TODO fix is_current to accept any language
+- var jumbo = is_home() || is_current('en/', true)
+mixin header()
+  header(class=jumbo ? "my--jumbo" : "my")
+    if (jumbo)
+      h1.my__name= config.author.name
+    else
+      a.my__name(href=url_for_lang('/'))= config.author.name
+
+    p.my__title= config.author.title
+    
+    - var size = jumbo ? 192 : 96
+    img.my__avatar(src=( theme.gravatar ? gravatar(config.author.email, size) : url_for(config.author.avatar)) title="It's me!" width=size height=size)

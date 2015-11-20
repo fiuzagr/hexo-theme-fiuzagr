@@ -1,0 +1,7 @@
+.DS_Store
+Thumbs.db
+node_modules/
+_config.yml
+*.iml
+.idea
+source/image/avatar.jpeg

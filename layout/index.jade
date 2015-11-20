@@ -1,0 +1,12 @@
+blockquote.micro-resume!= __('index.description')
+
+p.email-me
+  != mail_to(config.author.email, __('index.write_me'))
+
+ul.menu--list
+  each val, index in site.data.menu
+    li.menu__item
+      a(class="menu__link" href=url_for_lang(val) title=__('menu.' + index))= __('menu.' + index)
+  each val, index in site.data.contacts
+    li.menu__item
+      a(class="menu__link" href=val title=index)= index

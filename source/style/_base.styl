@@ -1,0 +1,98 @@
+/**
+ * Base styles
+ */
+
+html,
+body
+  base-font()
+  margin 0 auto
+
+body
+  font-family font-sans
+  color primary-text-color
+  background-color white
+
+a,
+a:visited,
+a:active
+  color darken(accent-color, 10%)
+  text-decoration none
+
+a:visited,
+a:active
+  color darken(accent-color, 40%)
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  font-weight 400
+
+h1
+  x-large()
+  margin-bottom lines(1)
+  margin-top lines(2)
+  font-weight 300
+
+h2
+  x-large()
+  margin-bottom lines(1)
+  margin-top lines(2)
+
+h3
+  large()
+  margin-bottom lines(1)
+  margin-top lines(1)
+
+h4
+  medium()
+  margin-bottom lines(1)
+  margin-top lines(1)
+
+h5
+  small()
+  margin-bottom lines(1)
+  margin-top lines(1)
+
+h6
+  x-small()
+  margin-bottom lines(1)
+  margin-top lines(1)
+
+p,
+ul,
+ol,
+pre,
+table,
+blockquote
+  margin-bottom lines(1)
+  margin-top lines(1)
+
+/* Sanitation */
+hr
+  margin -1px auto
+  border none
+  border-top 1px solid
+
+li > ol,
+li > ul
+  margin-bottom 0
+  margin-top 0
+
+b,
+strong,
+em,
+small,
+code
+  line-height 1
+
+sup,
+sub
+  top -0.4em
+  position relative
+  vertical-align baseline
+
+sub
+  top 0.4em

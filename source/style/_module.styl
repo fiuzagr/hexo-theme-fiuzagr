@@ -1,0 +1,91 @@
+// My info
+.my
+  position relative
+  z-index 1
+  height lines(4)
+  padding lines(1)
+
+  &::after
+    bottom 0
+    left 0
+    right 0
+    top 0
+    position absolute
+    z-index -1
+    content ""
+
+  .my__name
+    display block
+    margin-bottom 0
+    margin-top lines(1)
+
+  .my__title
+    margin-bottom 0
+    margin-top 0
+
+  .my__avatar
+    bottom -(lines(1))
+    right lines(1)
+    position absolute
+    width lines(4)
+    height lines(4)
+    border 5px solid
+
+
+// My info (Jumbo)
+.my--jumbo
+  height lines(8)
+
+  .my__name
+    display block
+    margin-bottom lines(1)
+    margin-top lines(3)
+
+  .my__title
+    margin-bottom lines(1)
+    margin-top lines(1)
+
+  .my__avatar
+    height lines(8)
+    width lines(8)
+    bottom -(lines(2))
+
+
+// E-mail me
+// .email-me
+//   text-align center
+
+
+// Micro Resume (home)
+.micro-resume
+  position relative
+
+  &::before,
+  &::after
+      position absolute
+      display inline-block
+
+// Menu
+.menu,
+.menu--list
+  list-style none
+
+
+// By (footer)
+// .by
+//   text-align center
+
+
+// Resume
+// .resume
+//   .resume__title,
+//   .resume__info
+//     text-align right
+//
+//   .resume__date,
+//   .resume__date--thin
+//     medium()
+//     font-weight 400
+//
+//   .resume__date--thin
+//     small()

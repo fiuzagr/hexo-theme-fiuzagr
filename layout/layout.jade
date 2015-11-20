@@ -1,0 +1,41 @@
+include ./_mixins.jade
+doctype html
+html(lang=page.lang)
+  head
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1')
+    meta(name='description' content=strip_html(__('index.description')))
+
+    title= page.title ? page.title : config.title
+
+    if (theme.rss)
+      link(rel='alternative' href=theme.rss title=config.title type='application/atom+xml')
+
+    if (theme.favicon)
+      link(rel='shortcut icon' href=theme.favicon)
+
+
+    //- != partial('google-analytics')
+    //- != partial('google_site_verification')
+
+    //- fonts
+    != css('https://fonts.googleapis.com/css?family=Roboto:300,400,500')
+    != css('https://fonts.googleapis.com/css?family=Source+Code+Pro')
+    != css('https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css')
+    
+    != css('style/index')
+
+  body
+    
+    .wrapper
+        +header()
+
+    main.main(role='main')
+      .wrapper
+        div(class='page ' + classify_path(path))
+          != body
+
+    footer
+      .wrapper
+        p.by.
+          #{__('footer.by')} #[a(href=config.author.follow) #{config.author.name}] #[i.fa.fa-copyright.fa-rotate-180] #{config.author.location}, #{date(Date.now(), 'YYYY')}

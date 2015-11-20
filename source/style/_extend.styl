@@ -1,0 +1,22 @@
+// Extends
+$box-center-align
+  margin lines(3) auto
+  padding 0
+  max-width lines(15.5)
+  width 100%
+
+
+// All extends rules
+
+// My info (Jumbo)
+.my--jumbo
+  @extend .my
+
+// Micro Resume (home)
+.micro-resume
+  @extend $box-center-align
+
+// Menu
+.menu,
+.menu--list
+  @extend $box-center-align

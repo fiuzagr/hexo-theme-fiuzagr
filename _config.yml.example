@@ -1,0 +1,8 @@
+# RSS
+rss: atom.xml
+
+# Miscellaneous
+google_site_verification:
+google_analytics:
+favicon:
+gravatar: false # Whether to use gravatar with the email. If you do, put your email address in your site's `_config.yml`.
